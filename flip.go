@@ -15,6 +15,7 @@ var upsideDownChars = map[string]string{
 	"2": "ᄅ", "1": "Ɩ", "0": "0",
 }
 
+// UpsideDown turns the given string upside down
 func UpsideDown(s string) string {
 	ss := strings.Split(s, "")
 	ns := ""
@@ -36,10 +37,12 @@ func UpsideDown(s string) string {
 	return ns
 }
 
+// Table flips the table
 func Table(s string) string {
 	return "(╯°□°）╯︵" + UpsideDown(s)
 }
 
+// Reverse reverses the given string
 func Reverse(s string) string {
 	ss := strings.Split(s, "")
 	ns := ""
