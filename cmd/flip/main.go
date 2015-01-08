@@ -12,7 +12,7 @@ Just go get the command:
 
 Usage
 
-You can flip a string on its own or decorate it with a named emoji
+You can flip a string on its own or decorate it with a named emoticon
 
     $ flip table foo         #=> (╯°□°）╯︵ooɟ
     $ flip gopher bar        #=> ʕ╯◔ϖ◔ʔ╯︵ɹɐq
