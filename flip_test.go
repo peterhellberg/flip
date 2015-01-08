@@ -38,6 +38,24 @@ func TestTable(t *testing.T) {
 	}
 }
 
+var gopherTests = []struct {
+	out string
+	in  string
+}{
+	{"ʕ╯◔ϖ◔ʔ╯︵q∀", "AB"},
+	{"ʕ╯◔ϖ◔ʔ╯︵ɾǝɥ", "hej"},
+	{"ʕ╯◔ϖ◔ʔ╯︵ʇxǝʇ", "text"},
+	{"ʕ╯◔ϖ◔ʔ╯︵ƃuıɹʇs ɹǝƃuoן ∀", "A longer string"},
+}
+
+func TestGopher(t *testing.T) {
+	for _, tt := range gopherTests {
+		if got := Gopher(tt.in); got != tt.out {
+			t.Errorf("Gopher(in) = %v, want %v", got, tt.out)
+		}
+	}
+}
+
 var reverseTests = []struct {
 	in  string
 	out string
