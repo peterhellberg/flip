@@ -2,6 +2,26 @@ package flip
 
 import "testing"
 
+var funcTests = []struct {
+	emoticon string
+	in       string
+	out      string
+}{
+	{"foo", "bar", "fooɹɐq"},
+	{DefaultEmoticon, "baz", "(╯°□°）╯︵zɐq"},
+	{GopherEmoticon, "qux", "ʕ╯◔ϖ◔ʔ╯︵xnb"},
+	{AngryEmoticon, "quux", "(ノಠ益ಠ)ノ︵xnnb"},
+	{SparklyEmoticon, "corge", "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧*:･ﾟ✧ ǝƃɹoɔ"},
+}
+
+func TestFunc(t *testing.T) {
+	for _, tt := range funcTests {
+		if got := Func(tt.emoticon)(tt.in); got != tt.out {
+			t.Errorf("Func(%#v)(%#v) = %#v, want %#v", tt.emoticon, tt.in, got, tt.out)
+		}
+	}
+}
+
 var flippersTests = []struct {
 	name string
 	in   string
