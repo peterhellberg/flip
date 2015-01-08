@@ -21,6 +21,12 @@ const (
 
 	// GopherEmoticon is the gopher emoticon used to do a gopher flip
 	GopherEmoticon = "ʕ╯◔ϖ◔ʔ╯︵"
+
+	// AngryEmoticon is an angry emoticon used to angrily flip the table
+	AngryEmoticon = "(ノಠ益ಠ)ノ︵"
+
+	// SparklyEmoticon is a very sparkly emoticon used to flip the table
+	SparklyEmoticon = "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧*:･ﾟ✧ "
 )
 
 var (
@@ -30,10 +36,18 @@ var (
 	// Gopher is the gopher table flipper func
 	Gopher = Func(GopherEmoticon)
 
+	// Angry is the angry table flipper func
+	Angry = Func(AngryEmoticon)
+
+	// Sparkly is the sparkly table flipper func
+	Sparkly = Func(SparklyEmoticon)
+
 	// Flippers is a map of named flipper funcs
 	Flippers = map[string]func(string) string{
-		"table":  Table,
-		"gopher": Gopher,
+		"table":   Table,
+		"gopher":  Gopher,
+		"angry":   Angry,
+		"sparkly": Sparkly,
 	}
 )
 

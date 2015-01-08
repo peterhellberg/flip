@@ -9,6 +9,8 @@ var flippersTests = []struct {
 }{
 	{"table", "foo", "(╯°□°）╯︵ooɟ"},
 	{"gopher", "bar", "ʕ╯◔ϖ◔ʔ╯︵ɹɐq"},
+	{"angry", "baz", "(ノಠ益ಠ)ノ︵zɐq"},
+	{"sparkly", "qux", "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧*:･ﾟ✧ xnb"},
 }
 
 func TestFlippers(t *testing.T) {
