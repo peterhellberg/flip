@@ -1,3 +1,32 @@
+/*
+
+Go library used to flip text.
+
+Installation
+
+Just go get the package:
+
+    go get -u github.com/peterhellberg/flip/
+
+Usage
+
+A small usage example
+
+    package main
+
+    import (
+    	"fmt"
+    	"os"
+    	"strings"
+
+    	"github.com/peterhellberg/flip"
+    )
+
+    func main() {
+    	fmt.Println(flip.Table(strings.Join(os.Args[1:], " ")))
+    }
+
+*/
 package flip
 
 import "strings"
