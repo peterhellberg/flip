@@ -15,6 +15,45 @@ var upsideDownChars = map[string]string{
 	"2": "ᄅ", "1": "Ɩ", "0": "0",
 }
 
+const (
+	// DefaultEmoticon is the default emoticon used to flip tables
+	DefaultEmoticon = "(╯°□°）╯︵"
+
+	// GopherEmoticon is the gopher emoticon used to do a gopher flip
+	GopherEmoticon = "ʕ╯◔ϖ◔ʔ╯︵"
+)
+
+var (
+	// Table is the default table flipper func
+	Table = Func(DefaultEmoticon)
+
+	// Gopher is the gopher table flipper func
+	Gopher = Func(GopherEmoticon)
+
+	// Flippers is a map of named flipper funcs
+	Flippers = map[string]func(string) string{
+		"table":  Table,
+		"gopher": Gopher,
+	}
+)
+
+// Func returns a flipper func
+func Func(s string) func(string) string {
+	f := Flipper(s)
+
+	return func(s string) string {
+		return f.Flip(s)
+	}
+}
+
+// Flipper is a string that decorates a flipped string
+type Flipper string
+
+// Flip flips and decorates a string
+func (f Flipper) Flip(s string) string {
+	return string(f) + UpsideDown(s)
+}
+
 // UpsideDown turns the given string upside down
 func UpsideDown(s string) string {
 	ss := strings.Split(s, "")
@@ -35,16 +74,6 @@ func UpsideDown(s string) string {
 	}
 
 	return ns
-}
-
-// Table flips the table
-func Table(s string) string {
-	return "(╯°□°）╯︵" + UpsideDown(s)
-}
-
-// Gopher flips the table
-func Gopher(s string) string {
-	return "ʕ╯◔ϖ◔ʔ╯︵" + UpsideDown(s)
 }
 
 // Reverse reverses the given string
