@@ -18,6 +18,10 @@ func flipString(args []string) string {
 			return flip.Table(strings.Join(args[1:], " "))
 		}
 
+		if args[0] == "gopher" && len(args) > 1 {
+			return flip.Gopher(strings.Join(args[1:], " "))
+		}
+
 		return flip.UpsideDown(strings.Join(args, " "))
 	}
 

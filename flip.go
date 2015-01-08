@@ -42,6 +42,11 @@ func Table(s string) string {
 	return "(╯°□°）╯︵" + UpsideDown(s)
 }
 
+// Gopher flips the table
+func Gopher(s string) string {
+	return "ʕ╯◔ϖ◔ʔ╯︵" + UpsideDown(s)
+}
+
 // Reverse reverses the given string
 func Reverse(s string) string {
 	ss := strings.Split(s, "")
