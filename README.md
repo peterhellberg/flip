@@ -20,9 +20,15 @@ go get -u github.com/peterhellberg/flip/cmd/flip
 You can flip a string on its own or decorate it with a named emoticon
 
 ```bash
-flip table foo         #=> (╯°□°）╯︵ooɟ
-flip gopher bar        #=> ʕ╯◔ϖ◔ʔ╯︵ɹɐq
-flip '(＃｀д´)ﾉ︵' baz #=> (＃｀д´)ﾉ︵zɐq
+flip foo        #=> ooɟ
+flip table bar  #=> (╯°□°）╯︵ɹɐq
+flip gopher baz #=> ʕ╯◔ϖ◔ʔ╯︵zɐq
+```
+
+You can also specify a custom emoticon
+
+```bash
+flip '(＃｀д´)ﾉ︵' baz  #=> (＃｀д´)ﾉ︵zɐq
 ```
 
 ## Examples
