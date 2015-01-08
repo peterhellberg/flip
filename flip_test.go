@@ -2,6 +2,23 @@ package flip
 
 import "testing"
 
+var flippersTests = []struct {
+	name string
+	in   string
+	out  string
+}{
+	{"table", "foo", "(╯°□°）╯︵ooɟ"},
+	{"gopher", "bar", "ʕ╯◔ϖ◔ʔ╯︵ɹɐq"},
+}
+
+func TestFlippers(t *testing.T) {
+	for _, tt := range flippersTests {
+		if got := Flippers[tt.name](tt.in); got != tt.out {
+			t.Errorf("Flippers[%#v](%#v) = %v, want %v", tt.name, tt.in, got, tt.out)
+		}
+	}
+}
+
 var upsideDownTests = []struct {
 	in  string
 	out string
