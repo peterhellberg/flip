@@ -1,5 +1,7 @@
 /*
 
+flip (╯°□°）╯︵ʇxǝʇ
+
 Go library used to flip text.
 
 Installation
