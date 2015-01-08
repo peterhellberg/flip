@@ -15,6 +15,16 @@ Go library used to flip text.
 go get -u github.com/peterhellberg/flip/cmd/flip
 ```
 
+### Usage
+
+You can flip a string on its own or decorate it with a named emoticon
+
+```bash
+flip table foo         #=> (╯°□°）╯︵ooɟ
+flip gopher bar        #=> ʕ╯◔ϖ◔ʔ╯︵ɹɐq
+flip '(＃｀д´)ﾉ︵' baz #=> (＃｀д´)ﾉ︵zɐq
+```
+
 ## Examples
 
 ### table.go
