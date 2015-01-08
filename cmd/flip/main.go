@@ -14,9 +14,9 @@ Usage
 
 You can flip a string on its own or decorate it with a named emoji
 
-    $ flip table foo  #=> (╯°□°）╯︵ooɟ
-    $ flip gopher bar #=> ʕ╯◔ϖ◔ʔ╯︵ɹɐq
-    $ flip baz        #=> zɐq
+    $ flip table foo         #=> (╯°□°）╯︵ooɟ
+    $ flip gopher bar        #=> ʕ╯◔ϖ◔ʔ╯︵ɹɐq
+    $ flip '(＃｀д´)ﾉ︵' baz #=> (＃｀д´)ﾉ︵zɐq
 
 */
 package main
@@ -35,12 +35,12 @@ func main() {
 
 func flipString(args []string) string {
 	if len(args) > 0 {
-		if args[0] == "table" && len(args) > 1 {
-			return flip.Table(strings.Join(args[1:], " "))
+		if f, ok := flip.Flippers[args[0]]; len(args) > 1 && ok {
+			return f(strings.Join(args[1:], " "))
 		}
 
-		if args[0] == "gopher" && len(args) > 1 {
-			return flip.Gopher(strings.Join(args[1:], " "))
+		if len(args) > 1 {
+			return args[0] + flip.UpsideDown(strings.Join(args[1:], " "))
 		}
 
 		return flip.UpsideDown(strings.Join(args, " "))
