@@ -47,8 +47,9 @@ var upsideDownTests = []struct {
 }{
 	{"ab", "qɐ"},
 	{"abcde", "ǝpɔqɐ"},
-	{"abcdefghijk", "ʞɾıɥƃɟǝpɔqɐ"},
-	{"abcdefghijklmnopqrstuvwxyz", "zʎxʍʌnʇsɹbdouɯןʞɾıɥƃɟǝpɔqɐ"},
+	{"abcdefghijk", "ʞɾᴉɥƃɟǝpɔqɐ"},
+	{"abcdefghijklmnopqrstuvwxyz", "zʎxʍʌnʇsɹbdouɯןʞɾᴉɥƃɟǝpɔqɐ"},
+	{"this", "sᴉɥʇ"},
 }
 
 func TestUpsideDown(t *testing.T) {
@@ -66,7 +67,7 @@ var tableTests = []struct {
 	{"(╯°□°）╯︵q∀", "AB"},
 	{"(╯°□°）╯︵ɾǝɥ", "hej"},
 	{"(╯°□°）╯︵ʇxǝʇ", "text"},
-	{"(╯°□°）╯︵ƃuıɹʇs ɹǝƃuoן ∀", "A longer string"},
+	{"(╯°□°）╯︵ƃuᴉɹʇs ɹǝƃuoן ∀", "A longer string"},
 }
 
 func TestTable(t *testing.T) {
@@ -84,7 +85,7 @@ var gopherTests = []struct {
 	{"ʕ╯◔ϖ◔ʔ╯︵q∀", "AB"},
 	{"ʕ╯◔ϖ◔ʔ╯︵ɾǝɥ", "hej"},
 	{"ʕ╯◔ϖ◔ʔ╯︵ʇxǝʇ", "text"},
-	{"ʕ╯◔ϖ◔ʔ╯︵ƃuıɹʇs ɹǝƃuoן ∀", "A longer string"},
+	{"ʕ╯◔ϖ◔ʔ╯︵ƃuᴉɹʇs ɹǝƃuoן ∀", "A longer string"},
 }
 
 func TestGopher(t *testing.T) {
