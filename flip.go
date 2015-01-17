@@ -1,6 +1,6 @@
 /*
 
-flip (╯°□°）╯︵ʇxǝʇ
+Package flip (╯°□°）╯︵ʇxǝʇ
 
 Go library used to flip text.
 
