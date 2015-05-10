@@ -1,6 +1,11 @@
-package flip
+package flip_test
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+
+	"github.com/peterhellberg/flip"
+)
 
 var funcTests = []struct {
 	emoticon string
@@ -8,18 +13,23 @@ var funcTests = []struct {
 	out      string
 }{
 	{"foo", "bar", "fooɹɐq"},
-	{DefaultEmoticon, "baz", "(╯°□°）╯︵zɐq"},
-	{GopherEmoticon, "qux", "ʕ╯◔ϖ◔ʔ╯︵xnb"},
-	{AngryEmoticon, "quux", "(ノಠ益ಠ)ノ︵xnnb"},
-	{SparklyEmoticon, "corge", "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧*:･ﾟ✧ ǝƃɹoɔ"},
+	{flip.DefaultEmoticon, "baz", "(╯°□°）╯︵zɐq"},
+	{flip.GopherEmoticon, "qux", "ʕ╯◔ϖ◔ʔ╯︵xnb"},
+	{flip.AngryEmoticon, "quux", "(ノಠ益ಠ)ノ︵xnnb"},
+	{flip.SparklyEmoticon, "corge", "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧*:･ﾟ✧ ǝƃɹoɔ"},
 }
 
 func TestFunc(t *testing.T) {
 	for _, tt := range funcTests {
-		if got := Func(tt.emoticon)(tt.in); got != tt.out {
+		if got := flip.Func(tt.emoticon)(tt.in); got != tt.out {
 			t.Errorf("Func(%#v)(%#v) = %#v, want %#v", tt.emoticon, tt.in, got, tt.out)
 		}
 	}
+}
+
+func ExampleFunc() {
+	fmt.Println(flip.Func("(O_o/︵")("example"))
+	// Output: (O_o/︵ǝןdɯɐxǝ
 }
 
 var flippersTests = []struct {
@@ -35,10 +45,15 @@ var flippersTests = []struct {
 
 func TestFlippers(t *testing.T) {
 	for _, tt := range flippersTests {
-		if got := Flippers[tt.name](tt.in); got != tt.out {
+		if got := flip.Flippers[tt.name](tt.in); got != tt.out {
 			t.Errorf("Flippers[%#v](%#v) = %v, want %v", tt.name, tt.in, got, tt.out)
 		}
 	}
+}
+
+func ExampleFlipper() {
+	fmt.Println(flip.Flippers["angry"]("example"))
+	// Output: (ノಠ益ಠ)ノ︵ǝןdɯɐxǝ
 }
 
 var upsideDownTests = []struct {
@@ -54,10 +69,15 @@ var upsideDownTests = []struct {
 
 func TestUpsideDown(t *testing.T) {
 	for _, tt := range upsideDownTests {
-		if got := UpsideDown(tt.in); got != tt.out {
+		if got := flip.UpsideDown(tt.in); got != tt.out {
 			t.Errorf("UpsideDown(in) = %v, want %v", got, tt.out)
 		}
 	}
+}
+
+func ExampleUpsideDown() {
+	fmt.Println(flip.UpsideDown("example"))
+	// Output: ǝןdɯɐxǝ
 }
 
 var tableTests = []struct {
@@ -72,10 +92,15 @@ var tableTests = []struct {
 
 func TestTable(t *testing.T) {
 	for _, tt := range tableTests {
-		if got := Table(tt.in); got != tt.out {
+		if got := flip.Table(tt.in); got != tt.out {
 			t.Errorf("Table(in) = %v, want %v", got, tt.out)
 		}
 	}
+}
+
+func ExampleTable() {
+	fmt.Println(flip.Table("example"))
+	// Output: (╯°□°）╯︵ǝןdɯɐxǝ
 }
 
 var gopherTests = []struct {
@@ -90,10 +115,15 @@ var gopherTests = []struct {
 
 func TestGopher(t *testing.T) {
 	for _, tt := range gopherTests {
-		if got := Gopher(tt.in); got != tt.out {
+		if got := flip.Gopher(tt.in); got != tt.out {
 			t.Errorf("Gopher(in) = %v, want %v", got, tt.out)
 		}
 	}
+}
+
+func ExampleGopher() {
+	fmt.Println(flip.Gopher("example"))
+	// Output: ʕ╯◔ϖ◔ʔ╯︵ǝןdɯɐxǝ
 }
 
 var reverseTests = []struct {
@@ -134,8 +164,13 @@ var reverseTests = []struct {
 
 func TestReverse(t *testing.T) {
 	for _, tt := range reverseTests {
-		if got := Reverse(tt.in); got != tt.out {
+		if got := flip.Reverse(tt.in); got != tt.out {
 			t.Errorf("Reverse(in) = %v, want %v", got, tt.out)
 		}
 	}
+}
+
+func ExampleReverse() {
+	fmt.Println(flip.Reverse("foo bar"))
+	// Output: rab oof
 }
