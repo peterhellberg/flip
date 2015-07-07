@@ -111,11 +111,9 @@ func UpsideDown(s string) string {
 			uc = upsideDownChars[strings.ToLower(ss[i])]
 		}
 
-		if uc == "" {
-			uc = ""
+		if uc != "" {
+			ns += uc
 		}
-
-		ns += uc
 	}
 
 	return ns
