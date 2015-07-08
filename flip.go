@@ -8,7 +8,7 @@ Installation
 
 Just go get the package:
 
-    go get -u github.com/peterhellberg/flip/
+    go get -u github.com/peterhellberg/flip
 
 Usage
 
