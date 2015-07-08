@@ -60,6 +60,7 @@ var upsideDownTests = []struct {
 	in  string
 	out string
 }{
+	{"@", ""},
 	{"ab", "qɐ"},
 	{"abcde", "ǝpɔqɐ"},
 	{"abcdefghijk", "ʞɾᴉɥƃɟǝpɔqɐ"},
