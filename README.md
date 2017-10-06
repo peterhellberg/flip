@@ -4,6 +4,7 @@ flip (╯°□°）╯︵ʇxǝʇ
 Go library used to flip text.
 
 [![Build Status](https://travis-ci.org/peterhellberg/flip.svg?branch=master)](https://travis-ci.org/peterhellberg/flip)
+[![Go Report Card](https://goreportcard.com/badge/github.com/peterhellberg/flip)](https://goreportcard.com/report/github.com/peterhellberg/flip)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/peterhellberg/flip)
 [![License MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/peterhellberg/flip#license-mit)
 
@@ -53,7 +54,7 @@ func main() {
 
 ## License (MIT)
 
-*Copyright (C) 2014 [Peter Hellberg](http://c7.se/)*
+*Copyright (C) 2014-2017 [Peter Hellberg](https://c7.se/)*
 
 > Permission is hereby granted, free of charge, to any person obtaining
 > a copy of this software and associated documentation files (the "Software"),
