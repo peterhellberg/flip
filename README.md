@@ -3,9 +3,9 @@ flip (╯°□°）╯︵ʇxǝʇ
 
 Go library used to flip text.
 
-[![Build Status](https://travis-ci.org/peterhellberg/flip.svg?branch=master)](https://travis-ci.org/peterhellberg/flip)
+[![Build status](https://github.com/peterhellberg/flip/actions/workflows/test.yml/badge.svg)](https://github.com/peterhellberg/flip/actions/workflows/test.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/peterhellberg/flip)](https://goreportcard.com/report/github.com/peterhellberg/flip)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/peterhellberg/flip)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://pkg.go.dev/github.com/peterhellberg/flip)
 [![License MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/peterhellberg/flip#license-mit)
 
 ## Command line tool
@@ -54,7 +54,7 @@ func main() {
 
 ## License (MIT)
 
-*Copyright (C) 2014-2019 [Peter Hellberg](https://c7.se)*
+*Copyright (C) 2014-2023 [Peter Hellberg](https://c7.se)*
 
 > Permission is hereby granted, free of charge, to any person obtaining
 > a copy of this software and associated documentation files (the "Software"),
