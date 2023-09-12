@@ -3,7 +3,7 @@ flip (╯°□°）╯︵ʇxǝʇ
 
 Go library used to flip text.
 
-[![Build status](https://github.com/peterhellberg/flip/actions/workflows/test.yml/badge.svg)](https://github.com/peterhellberg/flip/actions/workflows/test.yml)
+[![Build status](https://github.com/peterhellberg/flip/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/peterhellberg/flip/actions/workflows/tests.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/peterhellberg/flip)](https://goreportcard.com/report/github.com/peterhellberg/flip)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://pkg.go.dev/github.com/peterhellberg/flip)
 [![License MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/peterhellberg/flip#license-mit)
