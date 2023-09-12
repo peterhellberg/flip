@@ -1,7 +1,0 @@
-language: go
-
-dist: xenial
-
-go:
-  - "1.11.5"
-  - "1.10.8"
