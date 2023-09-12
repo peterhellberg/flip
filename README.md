@@ -13,7 +13,7 @@ Go library used to flip text.
 ### Installation
 
 ```bash
-go get -u github.com/peterhellberg/flip/cmd/flip
+go install github.com/peterhellberg/flip/cmd/flip@latest
 ```
 
 ### Usage
